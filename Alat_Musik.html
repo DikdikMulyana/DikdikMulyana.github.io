@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0" >
+    <head>
+        <title>PIANICA DIKDIK MULYANA</title>
+<style>
+body{
+     animation:dj 6s 1s infinite alternate;
+     background:orange;
+}
+@keyframes dj{
+     0%{background:red;}
+     10%{background:green;}
+     20%{background:blue;}
+     30%{background:orange;}
+     40%{background:tomato;}
+     50%{background:cyan;}
+     60%{background:darkblue;}
+     70%{background:lightblue;}
+     80%{background:#09abff;}
+
+}
+a{
+   text-decoration:none;
+}
+h1{
+   background:black;
+   color:white;
+   font-family:cursive;
+   box-shadow:1px 10px 10px grey;
+}
+input {
+    width:100px;
+    height:150px;
+    color:white;
+    background:black;
+    box-shadow:1px 10px 10px black;
+    font-family:monospace,cursive,georgia;
+}
+
+input:hover{
+   box-shadow:1px 2px 10px black;
+   opacity:0.6;
+}
+</style>
+    </head>
+    <body>
+<a href="#angklung" style="text-decoration:none">
+<input type="button" value="ANGKLUNG" onclick="mulai()">
+<input type="button" value="DRUMB" onclick="mulai1()">
+<input type="button" value="FLUTE" onclick="mulai2()">
+<input type="button" value="XYLPHONE" onclick="mulai3()">
+<input type="button" value="GENDANG" onclick="mulai4()">
+<input type="button" value="MENU" onclick="menu()">
+
+</a>
+<br>
+<br />
+<div id="angklung"></div>
+<script>
+var angklung=document.getElementById('angklung')
+function mulai(){
+angklung.innerHTML=`
+<h1 align="center">ANGKLUNG</h1>
+<input value="DO" type="button" onclick="do1()" id="do1">
+<input value="RE" type="button" onclick="re()" id="re">
+<input value="ME" type="button" onclick="me()" id="me">
+<input value="FA" type="button" onclick="fa()" id="fa">
+<input value="SOL"type="button" onclick="sol()" id="so">
+<input value="LA" type="button" onclick="la()" id="la">
+<input value="SI" type="button" onclick="si()" id="si">
+<input value="DO" type="button" onclick="do2()" id="do2">
+` 
+}
+var drumb=document.getElementById('angklung')
+function mulai1(){
+angklung.innerHTML=`
+<h1 align="center">DRUMB</h1>
+<input value="CRASH1" type="button" onclick="dr7()" id="cs1">
+<input value="CRASH2" type="button" onclick="dr8()" id="cs2">
+<input value="TAMBORIN" type="button" onclick="dr9()" id="do3">
+<input value="SNARE" type="button" onclick="dr4()" id="fa">
+<input value="FLOOR"type="button" onclick="dr5()" id="so">
+<input value="BASS" type="button" onclick="dr6()" id="la">
+<input value="TOM1" type="button" onclick="dr1()" id="do1">
+<input value="TOM2" type="button" onclick="dr2()" id="re">
+<input value="TOM3" type="button" onclick="dr3()" id="me">
+`
+}
+var angklung=document.getElementById('angklung')
+function mulai2(){
+angklung.innerHTML=`
+<h1 align="center">FLUTE</h1>
+<input value="DO" type="button" onclick="flt1()" id="do1">
+<input value="RE" type="button" onclick="flt2()" id="re">
+<input value="ME" type="button" onclick="flt3()" id="me">
+<input value="FA" type="button" onclick="flt4()" id="fa">
+<input value="SOL"type="button" onclick="flt5()" id="so">
+<input value="LA" type="button" onclick="flt6()" id="la">
+<input value="SI" type="button" onclick="flt7()" id="si">
+<input value="DO" type="button" onclick="flt8()" id="do2">
+`
+}
+
+var angklung=document.getElementById('angklung')
+function mulai3(){
+angklung.innerHTML=`
+<h1 align="center">XYLPHONE</h1>
+<input value="DO" type="button" onclick="xly1()" id="do1">
+<input value="RE" type="button" onclick="xly2()" id="re">
+<input value="ME" type="button" onclick="xly3()" id="me">
+<input value="FA" type="button" onclick="xly4()" id="fa">
+<input value="SOL"type="button" onclick="xly5()" id="so">
+<input value="LA" type="button" onclick="xly6()" id="la">
+<input value="SI" type="button" onclick="xly7()" id="si">
+<input value="DO" type="button" onclick="xly8()" id="do2">
+`
+}
+
+var angklung=document.getElementById('angklung')
+function mulai4(){
+angklung.innerHTML=`
+<h1 align="center">GENDANG</h1>
+<input value="DUM1" type="button" onclick="gg1()" id="do1">
+<input value="DUM2" type="button" onclick="gg2()" id="re">
+<input value="DUT" type="button" onclick="gg3()" id="me">
+<input value="TAK" type="button" onclick="gg4()" id="fa">
+<input value="TENG"type="button" onclick="gg5()" id="so">
+<input value="TANG" type="button" onclick="gg6()" id="la">
+<input value="TONG" type="button" onclick="gg7()" id="si">
+<input value="PLOK" type="button" onclick="gg8()" id="do2">
+<input value="JARCOK" type="button" onclick="gg9()" id="do2">
+<input value="TAK2" type="button" onclick="gg10()" id="do2">
+<input value="BOED" type="button" onclick="gg11()" id="do2">
+<input value="TONG2" type="button" onclick="gg12()" id="do2">
+<input value="BAKO" type="button" onclick="gg13()" id="do2">
+
+`
+}
+
+var angklung=document.getElementById('angklung')
+function menu(){
+angklung.innerHTML=`
+<h1 align="center">MENU</h1>
+<a href="https://dikdikmulyana.github.io/Alquran" target="_blank">
+<input value="Alquran" type="button" onclick="do1()" id="do1">
+</a>
+<a href="https://dikdikmulyana.github.io/text_to_speech">
+<input value="Text-to-speech" type="button" onclick="re()" id="re">
+</a>
+<a href="mailto:dikdikmulyana1998@gmail.com" target="_blank">
+<input value="Email" type="button" onclick="me()" id="me">
+</a>
+<a href="https://te.me/pythonDM" target="_blank">
+<input value="Telegram" type="button" onclick="me()" id="me">
+</a>
+<a href="https://api.whatsapp.com/send?phone=6282316825100&text=hi" target="_blank">
+<input value="Whatshapp" type="button" onclick="fa()" id="fa">
+</a>
+<a href="tel:+6282316825100" target="_blank">
+<input value="Telepon"type="button" onclick="sol()" id="so">
+</a>
+<a href="https://m.facebook.com/Dikdik-Mulyana-237036163864692/?ref_component=mbasic_bookmark&ref_page=XMenuController&_rdr" target="_blank">
+<input value="Facebook" type="button" onclick="la()" id="la">
+</a>
+<a href="https://github.com/DikdikMulyana" target="_blank">
+<input value="Github" type="button" onclick="si()" id="si">
+</a>
+<a href="https://dikdikmulyana.github.io/Alat_Musik">
+<input value="Alat-Musik" type="button" onclick="do2()" id="do2">
+</a>
+`
+}
+
+var a=new Audio ('Angklung/long_do1.mp3')
+var b=new Audio ('Angklung/long_re.mp3')
+var c=new Audio ('Angklung/long_mi.mp3')
+var d=new Audio ('Angklung/long_fa.mp3')
+var e=new Audio ('Angklung/long_sol.mp3')
+var f=new Audio ('Angklung/long_la.mp3')
+var g=new Audio ('Angklung/long_si.mp3')
+var h=new Audio ('Angklung/long_do2.mp3')
+
+var drm1=new Audio('Drumb/tom1.ogg')
+var drm2=new Audio('Drumb/tom2.ogg')
+var drm3=new Audio('Drumb/tom3.ogg')
+var drm4=new Audio('Drumb/snare.ogg')
+var drm5=new Audio('Drumb/floor.ogg')
+var drm6=new Audio('Drumb/bass.ogg')
+var drm7=new Audio('Drumb/crash1.ogg')
+var drm8=new Audio('Drumb/crash2.ogg')
+var drm9=new Audio('Drumb/tamborin.mp3')
+
+var f1=new Audio('Flute/flute_do1.mp3')
+var f2=new Audio('Flute/flute_re.mp3')
+var f3=new Audio('Flute/flute_mi.mp3')
+var f4=new Audio('Flute/flute_fa.mp3')
+var f5=new Audio('Flute/flute_sol.mp3')
+var f6=new Audio('Flute/flute_la.mp3')
+var f7=new Audio('Flute/flute_si.mp3')
+var f8=new Audio('Flute/flute_do2.mp3')
+
+var x1=new Audio('Xylphone/do1.ogg')
+var x2=new Audio('Xylphone/re.ogg')
+var x3=new Audio('Xylphone/me.ogg')
+var x4=new Audio('Xylphone/fa.ogg')
+var x5=new Audio('Xylphone/sol.ogg')
+var x6=new Audio('Xylphone/la.ogg')
+var x7=new Audio('Xylphone/si.ogg')
+var x8=new Audio('Xylphone/do2.ogg')
+
+var g1=new Audio('Gendang/dum1.mp3 ')
+var g2=new Audio('Gendang/dum2.mp3 ')
+var g3=new Audio('Gendang/dut.wav ')
+var g4=new Audio('Gendang/machine_tak.wav ')
+var g5=new Audio('Gendang/pak.mp3 ')
+var g6=new Audio('Gendang/tang.wav ')
+var g7=new Audio('Gendang/tong.wav ')
+var g8=new Audio('Gendang/tung.wav ')
+var g9=new Audio('Gendang/machine_tung2.wav ')
+var g10=new Audio('Gendang/machine_plak.wav ')
+var g11=new Audio('Gendang/tablar1.ogg ')
+var g12=new Audio('Gendang/machine_tong.wav ')
+var g13=new Audio('Gendang/tuk.mp3 ')
+
+/*dum1.mp3  machine_plak.wav  machine_tung2.wav  tang.wav  tung.wav
+dum2.mp3  machine_tak.wav   pak.mp3            tong.wav
+dut.wav   machine_tong.wav  tablar1.ogg        tuk.mp3 */
+
+function gg1(){
+     g1.play()
+     g1.currentTime=0
+}
+function gg2(){
+     g2.play()
+     g2.currentTime=0
+}
+function gg3(){
+     g3.play()
+     g3.currentTime=0
+}
+function gg4(){
+     g4.play()
+     g4.currentTime=0
+}
+function gg5(){
+     g5.play()
+     g5.currentTime=0
+}
+function gg6(){
+     g6.play()
+     g6.currentTime=0
+}
+function gg7(){
+     g7.play()
+     g7.currentTime=0
+}
+function gg8(){
+     g8.play()
+     g8.currentTime=0
+}
+function gg9(){
+     g9.play()
+     g9.currentTime=0
+}
+function gg10(){
+     g10.play()
+     g10.currentTime=0
+}
+function gg11(){
+     g11.play()
+     g11.currentTime=0
+}
+function gg12(){
+     g12.play()
+     g12.currentTime=0
+}
+function gg13(){
+     g13.play()
+     g13.currentTime=0
+}
+
+//Xlyphone
+function xly1(){
+    x1.play()
+    x1.currentTime=0
+}
+
+function xly2(){
+    x2.play()
+    x2.currentTime=0
+}
+function xly3(){
+    x3.play()
+    x3.currentTime=0
+}
+function xly4(){
+    x4.play()
+    x4.currentTime=0
+}
+function xly5(){
+    x5.play()
+    x5.currentTime=0
+}
+function xly6(){
+    x6.play()
+    x6.currentTime=0
+}
+function xly7(){
+    x7.play()
+    x7.currentTime=0
+}
+function xly8(){
+    x8.play()
+    x8.currentTime=0
+}
+
+//Flute
+function flt1(){
+    f1.play()
+    f1.currentTime=0
+}
+
+function flt2(){
+    f2.play()
+    f2.currentTime=0
+}
+
+function flt3(){
+    f3.play()
+    f3.currentTime=0
+}
+
+function flt4(){
+    f4.play()
+    f4.currentTime=0
+}
+
+function flt5(){
+    f5.play()
+    f5.currentTime=0
+}
+
+function flt6(){
+    f6.play()
+    f6.currentTime=0
+}
+
+function flt7(){
+    f7.play()
+    f7.currentTime=0
+}
+
+function flt8(){
+    f8.play()
+    f8.currentTime=0
+}
+//Drum
+function dr1(){
+     drm1.play()
+     drm1.currentTime=0
+}
+
+function dr2(){
+     drm2.play()
+     drm2.currentTime=0
+}
+
+function dr3(){
+     drm3.play()
+     drm3.currentTime=0
+}
+
+function dr4(){
+     drm4.play()
+     drm4.currentTime=0
+}
+
+function dr5(){
+     drm5.play()
+     drm5.currentTime=0
+}
+
+function dr6(){
+     drm6.play()
+     drm6.currentTime=0
+}
+
+function dr7(){
+     drm7.play()
+     drm7.currentTime=0
+}
+
+function dr8(){
+     drm8.play()
+     drm8.currentTime=0
+}
+
+function dr9(){
+     drm9.play()
+     drm9.currentTime=0
+}
+//angklung
+function do1(){
+    a.play()
+    a.currentTime=0
+}
+function re(){
+    b.play()
+    b.currentTime=0
+}
+function me(){
+    c.play()
+    c.currentTime=0
+}
+function fa(){
+    d.play()
+    d.currentTime=0
+}
+function sol(){
+    e.play()
+    e.currentTime=0
+}
+function la(){
+    f.play()
+    f.currentTime=0
+}
+function si(){
+    g.play()
+    g.currentTime=0
+}
+function do2(){
+    h.play()
+    h.currentTime=0
+}
+</script>
+    </body>
+</html>
